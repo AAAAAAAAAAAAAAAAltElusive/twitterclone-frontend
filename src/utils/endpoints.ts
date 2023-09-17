@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:4000"
+const BASE_URL = "https://twitterclone-backend.vercel.app"
 
 const LOGIN_ENDPOINT = BASE_URL + '/login'
 const REGISTER_ENDPOINT = BASE_URL + '/register'
