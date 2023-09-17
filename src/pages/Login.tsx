@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { ToastContainer, toast } from "react-toastify";
+import { LOGIN_ENDPOINT } from "../utils/endpoints.ts";
 
 interface FormValues {
   username: string;
@@ -28,7 +29,7 @@ function Login() {
     event.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/login",
+        LOGIN_ENDPOINT,
         {
           ...values,
         },
