@@ -3,6 +3,9 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import { useCookies } from "react-cookie";
 import { Link, useNavigate } from "react-router-dom";
+
+import { REGISTER_ENDPOINT } from "../utils/endpoints.ts";
+
 function Register() {
   const [cookies] = useCookies();
   const navigate = useNavigate();
@@ -21,7 +24,7 @@ function Register() {
     event.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/register",
+        REGISTER_ENDPOINT,
         {
           ...values,
         },
