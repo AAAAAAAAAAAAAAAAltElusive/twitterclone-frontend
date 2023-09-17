@@ -12,6 +12,7 @@ import CreateTweetButton from "./components/CreateTweet";
 import { Link } from "react-router-dom";
 import Menubar from "./pages/Menubar";
 import Sidebar from "./pages/Sidebar";
+import { CHECK_ENDPOINT } from "./utils/endpoints";
 
 interface GlobalLayoutProps {
     children: ReactNode
@@ -23,7 +24,7 @@ const Layout = ({ children }: GlobalLayoutProps) => {
 
     const checkAuth = async () => {
         try {
-            await axios.get("http://localhost:4000/check", { withCredentials: true })
+            await axios.get(CHECK_ENDPOINT, { withCredentials: true })
           } catch (err: any) {
             navigate("/login")
         }
