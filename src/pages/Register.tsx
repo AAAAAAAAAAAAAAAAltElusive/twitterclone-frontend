@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { useCookies } from "react-cookie";
 import { Link, useNavigate } from "react-router-dom";
 
-import { REGISTER_ENDPOINT } from "../utils/endpoints.ts";
+import { REGISTER_ENDPOINT } from "../utils/endpoints";
 
 function Register() {
   const [cookies] = useCookies();
