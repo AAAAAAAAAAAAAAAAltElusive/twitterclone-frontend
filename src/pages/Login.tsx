@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { ToastContainer, toast } from "react-toastify";
-import { LOGIN_ENDPOINT } from "../utils/endpoints.ts";
+import { LOGIN_ENDPOINT } from "../utils/endpoints";
 
 interface FormValues {
   username: string;
